@@ -24,20 +24,20 @@ public class NumbersActivity extends AppCompatActivity {
         //Create a list of words
        ArrayList<word> words = new ArrayList<word>();
 
-        words.add(new word("one", "Lutti"));
-        words.add(new word("two", "otiiko"));
-        words.add(new word("three", "tolookosu"));
-        words.add(new word("four", "oyyisa"));
-        words.add(new word("five", "massokka"));
-        words.add(new word("six", "temmokka"));
-        words.add(new word("seven", "kenekaku"));
-        words.add(new word("eight", "kawinta"));
-        words.add(new word("nine", "wo’e"));
-        words.add(new word("ten", "na’aacha"));
+        words.add(new word("one", "Lutti",  R.drawable.number_one));
+        words.add(new word("two", "otiiko",  R.drawable.number_two));
+        words.add(new word("three", "tolookosu",  R.drawable.number_three));
+        words.add(new word("four", "oyyisa",  R.drawable.number_four));
+        words.add(new word("five", "massokka",  R.drawable.number_five));
+        words.add(new word("six", "temmokka",  R.drawable.number_six));
+        words.add(new word("seven", "kenekaku",  R.drawable.number_seven));
+        words.add(new word("eight", "kawinta",  R.drawable.number_eight));
+        words.add(new word("nine", "wo’e",  R.drawable.number_nine));
+        words.add(new word("ten", "na’aacha",  R.drawable.number_ten));
 
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link com.example.android.miwok.WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter layoutadapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_numbers);
 
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
@@ -45,9 +45,9 @@ public class NumbersActivity extends AppCompatActivity {
         // word_listyout file.
         ListView listView = (ListView) findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
+        // Make the {@link ListView} use the {@link com.example.android.miwok.WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
-        listView.setAdapter(layoutadapter);
+        listView.setAdapter(adapter);
     }
     }
 
